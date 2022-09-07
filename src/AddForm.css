@@ -1,0 +1,43 @@
+.AddForm{
+    margin-top: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.AddForm label{
+    min-width: 100%;
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+
+}
+.AddForm input{
+    flex-grow: 1;
+    border:none ;
+    background: #f7f1f1;
+    padding: 0 1.5rem;
+    font-size: initial;
+}
+
+.AddForm button{
+    padding:0 1.3rem;
+    border:none ;
+    background: #f66;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    margin-left: 5px;
+    cursor: pointer;
+    transition: background .2s ease-out;
+}
+
+.AddForm button:hover{
+    background: #ff5e5e;
+
+}
+
+.AddForm input,
+.AddForm button {
+    font-family: "quicksand",sans-serif;
+    height: 3rem;  
+}
