@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import Todo from "./Todo";
 import AddForm from "./AddForm";
 import "./TodoList.css";
 const TodoList = () => {
-  const [todos, setTodos] = useState([]);
+  const [todos, setTodos] = useState(JSON.parse(window.localStorage.getItem("todos") || "[]"));
   function addTodo(todo) {
     setTodos((state) => [...state, todo]);
   }
@@ -24,6 +24,10 @@ const TodoList = () => {
     });
     setTodos(newTodos);
   }
+  useEffect(() => {
+    window.localStorage.setItem("todos", JSON.stringify(todos));
+    if (todos.length) return;
+  }, [todos]);
   return (
     <div className="TodoList">
       <h1>
